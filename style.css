@@ -1,0 +1,231 @@
+/*　-----------------------------------------------------------------　*/
+/*　ボディー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　-----------------------------------------------------------------　*/
+body {
+    background-color: whitesmoke;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+/*　-----------------------------------------------------------------　*/
+/*　ヘッダー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　-----------------------------------------------------------------　*/
+.headerMain {
+    float: left;
+}
+
+.headerMainLink {
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.headerMainLink:active {
+    border: solid 2px black;
+}
+
+.headerSub1 {
+    text-align: right;
+}
+
+.headerSub2 {
+    display: none;
+}
+
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　start　*/
+#headerSubMenuBoxCheck {
+    display: none;
+}
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　end　*/
+
+.headerSubLink {
+    color: black;
+}
+
+.headerSubLink:hover {
+    text-decoration: none;
+}
+
+.headerSubLink:active {
+    border: solid 2px black;
+}
+
+/*　-----------------------------------------------------------------　*/
+/*　ハンバーガーメニュー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　-----------------------------------------------------------------　*/
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　start　*/
+ul {
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　end　*/
+
+/*　-----------------------------------------------------------------　*/
+/*　メイン　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　-----------------------------------------------------------------　*/
+.mainContent {
+    text-align: center;
+}
+
+h1 {
+    font-weight: lighter;
+    margin-top: 105px;
+}
+
+.buttonLink {
+    display: inline-block;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    width: 70px;
+    height: 33px;
+    border-radius: 5px;
+    padding-top: 9px;
+}
+
+.buttonLink:hover {
+    opacity: 0.7;
+}
+
+.buttonLink:active {
+    opacity: 1;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　start　*/
+@media screen and (max-width:390px) {
+    /*　-----------------------------------------------------------------　*/
+    /*　ボディー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+    /*　-----------------------------------------------------------------　*/
+    body {
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    /*　-----------------------------------------------------------------　*/
+    /*　ヘッダー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+    /*　-----------------------------------------------------------------　*/
+    .headerMain {
+        float: none;
+    }
+
+    .headerSub1 {
+        display: none;
+    }
+
+    /*　-----------------------------------------------------------------　*/
+    /*　ハンバーガーメニュー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+    /*　-----------------------------------------------------------------　*/
+    .headerSub2 {
+        display: block;
+    }
+
+    .headerSubMenuBtn {
+        top: 10px;
+        position: fixed;
+        display: flex;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+        background-color: black;
+    }
+
+    .headerSubMenuBtn span,.headerSubMenuBtn span:before,.headerSubMenuBtn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: white;
+        position: absolute;
+    }
+
+    .headerSubMenuBtn span:before {
+        bottom: 8px;
+    }
+
+    .headerSubMenuBtn span:after {
+        top: 8px;
+    }
+
+    #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .headerSub2 {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 80;
+        background-color: gray;
+    }
+    .headerSub2 ul {
+        padding: 70px 10px 0;
+    }
+    .headerSub2 ul li {
+        border-bottom: solid 1px white;
+        list-style: none;
+    }
+    .headerSub2 ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: white;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    .headerSub2 ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px white;
+        border-right: solid 2px white;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+    .headerSub2 {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 80;
+        background-color: gray;
+        transition: all 0.5s;
+    }
+
+    #headerSubMenuBoxCheck:checked ~ .headerSub2 {
+        left: 0;
+    }
+
+}
+/*　20240805　レスポンシブ対策で追加（スマホ：390px × 844px）　end　*/
