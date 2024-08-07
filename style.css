@@ -131,57 +131,59 @@ img {
         display: block;
     }
 
+    /*ハンバーガークローズ時*/
     .headerSubMenuBtn {
-        top: 10px;
-        position: fixed;
-        display: flex;
-        right: 10px;
-        height: 50px;
-        width: 50px;
-        justify-content: center;
-        align-items: center;
-        z-index: 90;
         background-color: black;
+        width: 50px;
+        height: 50px;
+        position: fixed;            /*ハンバーガーの位置を固定（スクロールしても位置変わらない）*/
+        z-index: 90;                /*ハンバーガーの重なる順番を設定（メニューより上に表示）*/
+        top: 10px;                  /*ハンバーガーの位置をページ上から10pxに設定*/
+        right: 10px;                /*ハンバーガーの位置をページ右から10pxに設定*/
+        display: flex;              /*ハンバーガー内の3本線を並列に設定（設定しないと位置がずれる）*/
+        justify-content: center;    /*ハンバーガー内の3本線を上下中央に設定*/
+        align-items: center;        /*ハンバーガー内の3本線を左右中央に設定*/
     }
 
     .headerSubMenuBtn span,.headerSubMenuBtn span:before,.headerSubMenuBtn span:after {
-        content: '';
-        display: block;
-        height: 3px;
-        width: 25px;
-        border-radius: 3px;
+        content: '';                /*span要素とその前後に空白を追加（後に3本線となる）*/
         background-color: white;
+        width: 25px;
+        height: 3px;
+        border-radius: 3px;         /*ここまでで3本線が完成*/
+        display: block;
         position: absolute;
     }
 
     .headerSubMenuBtn span:before {
-        bottom: 8px;
+        bottom: 8px;                /*ハンバーガー内の3本線（1本目）の位置を2本目から上へ8pxに設定*/
     }
 
     .headerSubMenuBtn span:after {
-        top: 8px;
+        top: 8px;                   /*ハンバーガー内の3本線（3本目）の位置を2本目から下へ8pxに設定*/
     }
 
+    /*ハンバーガーオープン時*/
     #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, 0);   /*ハンバーガーオープン時、3本線（2本目）を透明にする*/
     }
     #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span::before {
-        bottom: 0;
-        transform: rotate(45deg);
+        bottom: 0;                  /*ハンバーガー内の3本線（1本目）の位置を定位置に設定*/
+        transform: rotate(45deg);   /*ハンバーガー内の3本線（1本目）の角度を45°に設定*/
     }
     #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span::after {
-        top: 0;
-        transform: rotate(-45deg);
+        top: 0;                     /*ハンバーガー内の3本線（3本目）の位置を定位置に設定*/
+        transform: rotate(-45deg);  /*ハンバーガー内の3本線（3本目）の角度を-45°に設定*/
     }
 
     .headerSub2 {
+        background-color: gray;
         width: 100%;
         height: 100%;
         position: fixed;
+        z-index: 80;                /*ハンバーガーの重なる順番を設定（ハンバーガーより下に表示）*/
         top: 0;
         left: 0;
-        z-index: 80;
-        background-color: gray;
     }
     .headerSub2 ul {
         padding: 70px 10px 0;
@@ -191,40 +193,42 @@ img {
         list-style: none;
     }
     .headerSub2 ul li a {
-        display: block;
-        width: 100%;
-        font-size: 15px;
+        display: block;               /*下線やくの字マークを作成するためにブロック要素に変更*/
         box-sizing: border-box;
         color: white;
+        width: 100%;
+        font-size: 15px;
         text-decoration: none;
         padding: 9px 15px 10px 0;
         position: relative;
     }
     .headerSub2 ul li a::before {
-        content: "";
+        content: "";                        /*a要素の後に空白を追加（後にくの字となる）*/
         width: 7px;
         height: 7px;
         border-top: solid 2px white;
         border-right: solid 2px white;
-        transform: rotate(45deg);
+        transform: rotate(45deg);           /*ここまででくの字が完成*/
         position: absolute;
-        right: 11px;
         top: 16px;
+        right: 11px;
     }
 
+    /*ハンバーガーオープン時*/
     .headerSub2 {
+        background-color: gray;
         width: 100%;
         height: 100%;
         position: fixed;
+        z-index: 80;                /*ハンバーガーの重なる順番を設定（ハンバーガーより下に表示）*/
         top: 0;
-        left: 100%;
-        z-index: 80;
-        background-color: gray;
-        transition: all 0.5s;
+        left: 100%;                 /*メニューの位置をページ左から100%に設定（画面から非表示にする）*/
+        transition: all 0.5s;       /*メニューの状態変更時のアニメーション（非表示↔︎表示になる際、0.5秒かけて左右に移動）*/
     }
 
+    /*ハンバーガークローズ時*/
     #headerSubMenuBoxCheck:checked ~ .headerSub2 {
-        left: 0;
+        left: 0;                    /*メニューの位置をページ左から0に設定（画面に表示する）*/
     }
 
 }
