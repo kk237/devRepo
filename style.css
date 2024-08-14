@@ -1,16 +1,28 @@
 /*　-----------------------------------------------------------------　*/
 /*　ボディー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-body {
-    background-color: whitesmoke;
-    margin-top: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-}
+/* 20240809　xxxクラス実装で削除　start */
+/* body { */
+    /* background-color: whitesmoke; */
+    /* margin-top: 20px; */
+    /* margin-left: 80px; */
+    /* margin-right: 80px; */
+/* } */
+/* 20240809　xxxクラス実装で削除　end */
 
 /*　-----------------------------------------------------------------　*/
 /*　ヘッダー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
+
+/* 20240809　xxxクラス実装で追加　start */
+header {
+    background-color: whitesmoke;
+    padding-top: 1%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+/* 20240809　xxxクラス実装で追加　end */
+
 .headerMain {
     float: left;
 }
@@ -67,17 +79,45 @@ li {
 /*　-----------------------------------------------------------------　*/
 /*　メイン　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-.mainContent {
+/* 20240809　xxxクラス実装で削除　start */
+/* .mainContent { */
+    /* text-align: center; */
+/* } */
+/* 20240809　xxxクラス実装で削除　end */
+
+/* 20240809　xxxクラス実装で追加　start */
+.topContent {
+    background-color: whitesmoke;
     text-align: center;
 }
 
+.mainContentImg {
+    width: 85%;
+    border-radius: 20px;
+    margin-top: 60px;
+}
+/* 20240809　xxxクラス実装で追加　end */
+
 h1 {
     font-weight: lighter;
-    margin-top: 105px;
+    /* 20240809　xxxクラス実装で削除　start */
+    /* margin-top: 105px; */
+    /* 20240809　xxxクラス実装で削除　end */
+    /* 20240809　xxxクラス実装で追加　start */
+    margin-top: 0;
+    padding-top: 105px;
+    /* 20240809　xxxクラス実装で追加　end */
 }
 
 .buttonLink {
-    display: inline-block;
+    /* 20240809　xxxクラス実装で削除　start */
+    /* display: inline-block; */
+    /* 20240809　xxxクラス実装で削除　end */
+    /* 20240809　xxxクラス実装で追加　start */
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    /* 20240809　xxxクラス実装で追加　end */
     font-size: 14px;
     color: white;
     text-decoration: none;
@@ -96,11 +136,82 @@ h1 {
     opacity: 1;
 }
 
-img {
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 60px;
+/* 20240809　xxxクラス実装で削除　start */
+/* img { */
+    /* width: 100%; */
+    /* border-radius: 20px; */
+    /* margin-top: 60px; */
+/* } */
+/* 20240809　xxxクラス実装で削除　end */
+
+/* 20240809　xxxクラス実装で追加　start */
+.secondContentHeader {
+    /* background-color: yellow; */
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
+
+.secondContentHeader h2 {
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.asterisk {
+    font-size: 30px;
+    color: gray;
+}
+
+.secondContent h2,.secondContent p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.secondContent1 {
+    /* background-color: yellowgreen; */
+    height: 380px;
+}
+
+.secondContent1Text {
+    float: left;
+    width: 43%;
+    margin-top: 5%;
+    margin-left: 8%;
+}
+
+.secondContent1Text h3,.secondContent2Text h3 {
+    font-size: 35px;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.secondContent1Img,.secondContent2Img {
+    width: 40%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.secondContent2 {
+    /* background-color: red; */
+    height: 380px;
+    margin-top: 70px;
+}
+
+.secondContent2Text {
+    padding-top: 80px;
+}
+
+.secondContent2Img {
+    display: block;
+    float: left;
+    margin-right: 13%;
+    margin-left: 8%;
+}
+
+/* 20240809　xxxクラス実装で追加　end */
+
+/* 20240809　xxxクラス実装で削除　start */
 
 /*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　*/
 @media screen and (max-width:430px) {
