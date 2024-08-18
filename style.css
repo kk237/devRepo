@@ -1,27 +1,26 @@
 /*　-----------------------------------------------------------------　*/
 /*　ボディー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-/* 20240809　xxxクラス実装で削除　start */
-/* body { */
-    /* background-color: whitesmoke; */
-    /* margin-top: 20px; */
-    /* margin-left: 80px; */
-    /* margin-right: 80px; */
-/* } */
-/* 20240809　xxxクラス実装で削除　end */
+body {
+    margin: 0;
+}
 
 /*　-----------------------------------------------------------------　*/
 /*　ヘッダー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-
-/* 20240809　xxxクラス実装で追加　start */
 header {
     background-color: whitesmoke;
-    padding-top: 1%;
-    padding-left: 7%;
-    padding-right: 7%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
-/* 20240809　xxxクラス実装で追加　end */
+
+header > div {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .headerMain {
     float: left;
@@ -41,16 +40,6 @@ header {
     text-align: right;
 }
 
-.headerSub2 {
-    display: none;
-}
-
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　*/
-#headerSubMenuBoxCheck {
-    display: none;
-}
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　*/
-
 .headerSubLink {
     color: black;
 }
@@ -63,10 +52,17 @@ header {
     border: solid 2px black;
 }
 
+#headerSubMenuBoxCheck {
+    display: none;
+}
+
+.headerSub2 {
+    display: none;
+}
+
 /*　-----------------------------------------------------------------　*/
 /*　ハンバーガーメニュー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　*/
 ul {
     padding-left: 0px;
 }
@@ -74,55 +70,40 @@ ul {
 li {
     list-style: none;
 }
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　*/
 
 /*　-----------------------------------------------------------------　*/
-/*　メイン　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　メイン - トップコンテンツ  　　　　　　　　　　　　　　　　　　　　　　　　　　*/
 /*　-----------------------------------------------------------------　*/
-/* 20240809　xxxクラス実装で削除　start */
-/* .mainContent { */
-    /* text-align: center; */
-/* } */
-/* 20240809　xxxクラス実装で削除　end */
-
-/* 20240809　xxxクラス実装で追加　start */
 .topContent {
     background-color: whitesmoke;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     text-align: center;
 }
 
-.mainContentImg {
-    width: 85%;
-    border-radius: 20px;
-    margin-top: 60px;
-}
-/* 20240809　xxxクラス実装で追加　end */
-
-h1 {
-    font-weight: lighter;
-    /* 20240809　xxxクラス実装で削除　start */
-    /* margin-top: 105px; */
-    /* 20240809　xxxクラス実装で削除　end */
-    /* 20240809　xxxクラス実装で追加　start */
+.topContentText h1 {
     margin-top: 0;
-    padding-top: 105px;
-    /* 20240809　xxxクラス実装で追加　end */
+    margin-bottom: 0;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.topContentText p {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .buttonLink {
-    /* 20240809　xxxクラス実装で削除　start */
-    /* display: inline-block; */
-    /* 20240809　xxxクラス実装で削除　end */
-    /* 20240809　xxxクラス実装で追加　start */
     display: block;
     margin-right: auto;
     margin-left: auto;
-    /* 20240809　xxxクラス実装で追加　end */
     font-size: 14px;
     color: white;
     text-decoration: none;
     background-color: black;
-    width: 70px;
+    width: 75px;
     height: 33px;
     border-radius: 5px;
     padding-top: 9px;
@@ -136,25 +117,35 @@ h1 {
     opacity: 1;
 }
 
-/* 20240809　xxxクラス実装で削除　start */
-/* img { */
-    /* width: 100%; */
-    /* border-radius: 20px; */
-    /* margin-top: 60px; */
-/* } */
-/* 20240809　xxxクラス実装で削除　end */
-
-/* 20240809　xxxクラス実装で追加　start */
-.secondContentHeader {
-    /* background-color: yellow; */
-    text-align: center;
-    padding-top: 90px;
-    padding-bottom: 90px;
+.topContentImg {
+    max-width: 1300px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.secondContentHeader h2 {
-    font-weight: lighter;
-    font-size: 40px;
+.topContentImg img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*　-----------------------------------------------------------------　*/
+/*　メイン - セカンドコンテンツ　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+/*　-----------------------------------------------------------------　*/
+.secondContent {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.secondContent > div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secondContentHeader,.secondContent1,.secondContent2 {
+    max-width: 1500px;
 }
 
 .asterisk {
@@ -167,18 +158,6 @@ h1 {
     margin-bottom: 0;
 }
 
-.secondContent1 {
-    /* background-color: yellowgreen; */
-    height: 380px;
-}
-
-.secondContent1Text {
-    float: left;
-    width: 43%;
-    margin-top: 5%;
-    margin-left: 8%;
-}
-
 .secondContent1Text h3,.secondContent2Text h3 {
     font-size: 35px;
     font-weight: lighter;
@@ -186,47 +165,54 @@ h1 {
     margin-bottom: 0;
 }
 
-.secondContent1Img,.secondContent2Img {
+.secondContentHeader {
+    text-align: center;
+}
+
+.secondContentHeader h2 {
+    font-weight: lighter;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.secondContent1,.secondContent2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondContent1Text,.secondContent2Text {
     width: 40%;
+}
+
+.secondContent1Img,.secondContent2Img {
+    width: 48%;
+}
+
+.secondContent1Img img,.secondContent2Img img {
+    width: 100%;
     height: 100%;
     border-radius: 25px;
 }
 
+.secondContent1 {
+    margin-top: 60px;
+}
+
 .secondContent2 {
-    /* background-color: red; */
-    height: 380px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
-.secondContent2Text {
-    padding-top: 80px;
-}
-
-.secondContent2Img {
-    display: block;
-    float: left;
-    margin-right: 13%;
-    margin-left: 8%;
-}
-
-/* 20240809　xxxクラス実装で追加　end */
-
-/* 20240809　xxxクラス実装で削除　start */
-
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　*/
 @media screen and (max-width:430px) {
-    /*　-----------------------------------------------------------------　*/
-    /*　ボディー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
-    /*　-----------------------------------------------------------------　*/
-    body {
-        margin-top: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
-
     /*　-----------------------------------------------------------------　*/
     /*　ヘッダー　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　*/
     /*　-----------------------------------------------------------------　*/
+    header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     .headerMain {
         float: none;
     }
@@ -242,7 +228,7 @@ h1 {
         display: block;
     }
 
-    /*ハンバーガークローズ時*/
+    /* ハンバーガークローズ時 */
     .headerSubMenuBtn {
         background-color: black;
         width: 50px;
@@ -250,7 +236,7 @@ h1 {
         position: fixed;            /*ハンバーガーの位置を固定（スクロールしても位置変わらない）*/
         z-index: 90;                /*ハンバーガーの重なる順番を設定（メニューより上に表示）*/
         top: 10px;                  /*ハンバーガーの位置をページ上から10pxに設定*/
-        right: 10px;                /*ハンバーガーの位置をページ右から10pxに設定*/
+        right: 15px;                /*ハンバーガーの位置をページ右から10pxに設定*/
         display: flex;              /*ハンバーガー内の3本線を並列に設定（設定しないと位置がずれる）*/
         justify-content: center;    /*ハンバーガー内の3本線を上下中央に設定*/
         align-items: center;        /*ハンバーガー内の3本線を左右中央に設定*/
@@ -274,7 +260,7 @@ h1 {
         top: 8px;                   /*ハンバーガー内の3本線（3本目）の位置を2本目から下へ8pxに設定*/
     }
 
-    /*ハンバーガーオープン時*/
+    /* ハンバーガーオープン時 */
     #headerSubMenuBoxCheck:checked ~ .headerSubMenuBtn span {
         background-color: rgba(255, 255, 255, 0);   /*ハンバーガーオープン時、3本線（2本目）を透明にする*/
     }
@@ -325,7 +311,7 @@ h1 {
         right: 11px;
     }
 
-    /*ハンバーガーオープン時*/
+    /* ハンバーガーオープン時 */
     .headerSub2 {
         background-color: gray;
         width: 100%;
@@ -337,10 +323,72 @@ h1 {
         transition: all 0.5s;       /*メニューの状態変更時のアニメーション（非表示↔︎表示になる際、0.5秒かけて左右に移動）*/
     }
 
-    /*ハンバーガークローズ時*/
+    /* ハンバーガークローズ時 */
     #headerSubMenuBoxCheck:checked ~ .headerSub2 {
         left: 0;                    /*メニューの位置をページ左から0に設定（画面に表示する）*/
     }
 
+    /*　-----------------------------------------------------------------　*/
+    /*　メイン - トップコンテンツ  　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+    /*　-----------------------------------------------------------------　*/
+    .topContent {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .topContentText h1 {
+        font-size: 30px;
+    }
+    .topContentImg img {
+        border-radius: 10px;
+    }
+
+    /*　-----------------------------------------------------------------　*/
+    /*　メイン - セカンドコンテンツ　　　　　　　　　　　　　　　　　　　　　　　　　　*/
+    /*　-----------------------------------------------------------------　*/
+    .secondContent {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .secondContentHeader h2 {
+        font-size: 30px;
+    }
+
+    .secondContent1,.secondContent2 {
+        display: block;
+        justify-content: space-between;
+    }
+
+    .secondContent1Text h3,.secondContent2Text h3 {
+        font-size: 30px;
+    }
+
+    .secondContent1Img,.secondContent2Img {
+        width: 100%;
+    }
+
+    .secondContent1Img img,.secondContent2Img img {
+        border-radius: 10px;
+    }
+
+    .secondContent1 {
+        margin-top: 30px;
+    }
+
+    .secondContent1Img {
+        margin-top: 20px;
+    }
+
+    .secondContent2 {
+        margin-top: 15px;
+    }
+
+    .secondContent2Text {
+        margin-top: 20px;
+    }
 }
-/*　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　*/

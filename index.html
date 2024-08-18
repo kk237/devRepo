@@ -7,62 +7,47 @@
             <title>TestSite</title>
             <meta charset="UTF-8">
             <link rel="stylesheet" href="style.css">
-            <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　-->
             <meta name="viewport" content="width=device-width,initial-scale=1">
-            <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　-->
         </head>
         <body>
             <header>
-                <div class="headerMain">
-                    <a class="headerMainLink" href="#">TestSite</a>
-                </div>
-
-                <!--　20240805　レスポンシブ対策で削除（スマホ：430px × 932px）　start　-->
-                <!-- <div class="headerSub"> -->
-                <!--　20240805　レスポンシブ対策で削除（スマホ：430px × 932px）　end　-->
-
-                <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　-->
-                <div class="headerSub1">
-                <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　-->
-                    <a class="headerSubLink" href="#">プライバシーポリシー</a>
-                    <a class="headerSubLink" href="#">お問い合わせ</a>
-                </div>
-
-                <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　start　-->
-                <div class="headerSubMenuBox">
-                    <input type="checkbox" id="headerSubMenuBoxCheck">
-                    <label for="headerSubMenuBoxCheck" class="headerSubMenuBtn"><span></span></label>
-                    <div class="headerSub2">
-                        <ul>
-                            <li>
-                                <a class="headerSubLink" href="#">プライバシーポリシー</a>
-                            </li>
-                            <li>
-                                <a class="headerSubLink" href="#">お問い合わせ</a>
-                            </li>
-                        </ul>
+                <div>
+                    <div class="headerMain">
+                        <a class="headerMainLink" href="#">TestSite</a>
+                    </div>
+                    <div class="headerSub1">
+                        <a class="headerSubLink" href="#">プライバシーポリシー</a>
+                        <a class="headerSubLink" href="#">お問い合わせ</a>
+                    </div>
+                    <div class="headerSubMenuBox">
+                        <input type="checkbox" id="headerSubMenuBoxCheck">
+                        <label for="headerSubMenuBoxCheck" class="headerSubMenuBtn"><span></span></label>
+                        <div class="headerSub2">
+                            <ul>
+                                <li>
+                                    <a class="headerSubLink" href="#">プライバシーポリシー</a>
+                                </li>
+                                <li>
+                                    <a class="headerSubLink" href="#">お問い合わせ</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <!--　20240805　レスポンシブ対策で追加（スマホ：430px × 932px）　end　-->
-
+                
             </header>
             <main class="mainContent">
-                <!--　20240809　xxxクラス実装で追加　start　-->
                 <div class="topContent">
-                <!--　20240809　xxxクラス実装で追加　end　-->
-                    <h1>見出し</h1>
-                    <p>本文</p>
-                    <a class="buttonLink" href="#">ボタン</a>
-                    <!--　20240809　xxxクラス実装で削除　start　-->
-                    <!-- <img class="mainContentImg" src="image/cat.jpg" alt="猫画像"> -->
-                    <!-- <img src="https://github.com/kk237/devRepo/blob/main/cat.jpg?raw=true" alt="猫画像"> -->
-                    <!--　20240809　xxxクラス実装で削除　end　-->
-                    <!-- <img class="mainContentImg" src="image/cat.jpg" alt="猫画像"> -->
-                    <img class="mainContentImg" src="https://github.com/kk237/devRepo/blob/main/cat.jpg?raw=true" alt="猫画像">
-                <!--　20240809　xxxクラス実装で追加　start　-->
+                    <div class="topContentText">
+                        <h1>見出し</h1>
+                        <p>本文</p>
+                        <a class="buttonLink" href="#">ボタン</a>
+                    </div>
+                    <div class="topContentImg">
+                        <img src="image/cat.jpg" alt="猫画像">
+                        <!-- <img class="topContentImg" src="https://github.com/kk237/devRepo/blob/main/cat.jpg?raw=true" alt="猫画像"> -->
+                    </div>
                 </div>
-                <!--　20240809　xxxクラス実装で追加　end　-->
-                <!--　20240809　xxxクラス実装で追加　start　-->
                 <div class="secondContent">
                     <div class="secondContentHeader">
                         <p class="asterisk">＊</p>
@@ -79,12 +64,14 @@
                                 <li><span>&check;&nbsp;</span>本文</li>
                             </ul>
                         </div>
-                        <!-- <img class="secondContent1Img" src ="image/cat2.jpg" alt="猫画像"> -->
-                        <img class="secondContent1Img" src ="https://github.com/kk237/devRepo/blob/main/cat2.jpg?raw=true" alt="猫画像">
+                        <div class="secondContent1Img">
+                            <img src ="image/cat2.jpg" alt="猫画像">
+                        </div>
                     </div>
                     <div class="secondContent2">
-                        <!-- <img class="secondContent2Img" src ="image/cat3.jpg" alt="猫画像"> -->
-                        <img class="secondContent2Img" src ="https://github.com/kk237/devRepo/blob/main/cat3.jpg?raw=true" alt="猫画像">
+                        <div class="secondContent2Img">
+                            <img src ="image/cat3.jpg" alt="猫画像">
+                        </div>
                         <div class="secondContent2Text">
                             <p class="asterisk">＊</p>
                             <h3>見出し</h3>
@@ -96,7 +83,6 @@
                         </div>
                     </div>
                 </div>
-                <!--　20240809　xxxクラス実装で追加　end　-->
             </main>
         </body>
     </html>
